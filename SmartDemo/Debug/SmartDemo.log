@@ -2,6 +2,5 @@
   SmartDemoDlg.cpp
 C:\Sang\smartDemo\SmartDemo\SmartDemoDlg.cpp(43,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Sang\smartDemo\SmartDemo\SmartDemoDlg.cpp(62,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Sang\smartDemo\SmartDemo\SmartDemoDlg.cpp(168,11): error C7624: Type name 'CImageList' cannot appear on the right side of a class member access expression
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\atlmfc\include\afxwin.h(1058,7): message : see declaration of 'CImageList'
-C:\Sang\smartDemo\SmartDemo\SmartDemoDlg.cpp(290,19): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Sang\smartDemo\SmartDemo\SmartDemoDlg.cpp(268,19): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  SmartDemo.vcxproj -> C:\Sang\smartDemo\Debug\SmartDemo.exe

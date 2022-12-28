@@ -155,29 +155,6 @@ BOOL CSmartDemoDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	//String pngPath = L"C:\Users\phong\Downloads\LOGO.png";
-	CImageList pngImage;
-	CBitmap pngBmp;
-	CDC bmDC;
-	CBitmap* pOldbmp;
-	BITMAP  bi;
-	UINT xPos = 255, yPos = 60;
-
-	CClientDC dc(this);
-
-	pngImage.CImageList(IDB_PNG2);
-	// new code
-
-	pngBmp.Attach(pngImage.Detach());
-
-	bmDC.CreateCompatibleDC(&dc);
-
-	pOldbmp = bmDC.SelectObject(&pngBmp);
-	pngBmp.GetBitmap(&bi);
-	dc.BitBlt(xPos, yPos, bi.bmWidth, bi.bmHeight, &bmDC, 0, 0, SRCCOPY);
-	bmDC.SelectObject(pOldbmp);
-
-	CBITMAP_.LoadBitmap(IDB_BITMAP1);
 	m_ANH.SetBitmap((HBITMAP)CBITMAP_.Detach());
 	UpdateData(FALSE);
 	//SetDlgItemText(IDC_STATIC_SDK_VERSION, NvdSdkGetVersion());
