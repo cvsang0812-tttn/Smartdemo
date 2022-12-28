@@ -1,0 +1,38 @@
+#pragma once
+
+
+// CVideoWnd dialog
+
+class CVideoWnd : public CDialog
+{
+	DECLARE_DYNAMIC(CVideoWnd)
+
+public:
+	CVideoWnd(int nNumber, CWnd* pParent = NULL);   // standard constructor
+	virtual ~CVideoWnd();
+
+// Dialog Data
+	enum { IDD = IDD_VIDEOWND };
+
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+
+	DECLARE_MESSAGE_MAP()
+public:
+	enum {ACTIVECOLOR = RGB(255, 0, 0), UNACTIVECOLOR = RGB(0, 128, 128)};
+	int m_nCurrentNum;			//当前窗口号
+	COLORREF m_color;			//边框色
+	BOOL m_bMaxFlag;			//最大化标识
+	//HWND m_hMainHwnd;			//主窗口句柄
+	CWnd* m_hMainHwnd;			//主窗口句柄
+
+private:
+	void UpdateInterface(CPaintDC *pDC);
+	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
+	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnPaint();
+protected:
+	virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+};
